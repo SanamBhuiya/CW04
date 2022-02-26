@@ -1,0 +1,22 @@
+<?php
+# function to check the count of words in a string
+function word_count($str) {
+# initializing count with 1 as string always start with a word
+$count=1;
+for($i=0;$i<=strlen($str);$i++)# loop for accessing characters in a string
+{
+   $char=substr($str,$i,1);# getting character at ith index
+   if(ctype_space($char))# checking whether character at ith index is space or not
+   {
+       $count++; # if space is found then second word would be there so count will be
+                   #increased
+   }
+}
+echo $count;# printing the count of words
+}
+
+word_count("hello, how are you?");# calling the word_count function with given example
+?>
+
+</body>
+</html>

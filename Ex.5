@@ -1,0 +1,19 @@
+<?php
+function countWords($str) {
+$splitstring=explode(" ",$str);
+$wordcountarray = array();
+foreach($splitstring as $word => $word_count)
+{
+   if (array_key_exists( $word_count , $wordcountarray))
+{
+$wordcountarray[$word_count]+=1;
+}
+else
+{
+$wordcountarray[$word_count]=1;
+}
+print_r($wordcountarray);
+}
+$str =strtolower("Hello hello you there. Hello How are you doing today?");
+countWords($str);
+?>
